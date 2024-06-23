@@ -37,7 +37,7 @@ jobs:
         id: compile
         run: |
           mkdir -p "$REPOSITORY_DIR/atf-20231013-0ea67d76a/configs"
-          cp -f "$REPOSITORY_DIR/atf-20220606-637ba581b/configs/mt7981_cmcc_rax3000m-emmc_defconfig" "$REPOSITORY_DIR/atf-20231013-0ea67d76a/configs/mt7981_cmcc_rax3000m-emmc_defconfig"
+          cp -f "$REPOSITORY_DIR/atf-20220606-637ba581b/configs/mt7981_cmcc_rax3000m-emmc_defconfig.txt" "$REPOSITORY_DIR/atf-20231013-0ea67d76a/configs/mt7981_cmcc_rax3000m-emmc_defconfig.txt"
           cd $REPOSITORY_DIR
           SOC=mt7981 BOARD=cmcc_rax3000m-emmc ./build.sh
           cd output
