@@ -38,6 +38,7 @@ jobs:
         run: |
           # mkdir -p "$REPOSITORY_DIR/atf-20231013-0ea67d76a/configs"
           #cp -r "$REPOSITORY_DIR/atf-20220606-637ba581b/configs/" "$REPOSITORY_DIR/atf-20231013-0ea67d76a/configs/"
+          ln -s "$REPOSITORY_DIR/atf-20231013-0ea67d76a/configs" "$REPOSITORY_DIR/atf-20220606-637ba581b/configs"
           cd $REPOSITORY_DIR
           #cp -r ./atf-20220606-637ba581b/configs/ ./atf-20231013-0ea67d76a/configs
           SOC=mt7981 BOARD=cmcc_rax3000m-emmc ./build.sh
