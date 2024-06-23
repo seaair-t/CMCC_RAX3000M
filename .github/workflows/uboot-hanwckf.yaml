@@ -51,7 +51,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: '[uBoot][${{ steps.compile.outputs.file_date1 }}]适用于cmcc_rax3000m_nand版本的uboot'
+          name: '[uBoot][${{ steps.compile.outputs.file_date1 }}]适用于cmcc_rax3000m_emcc版本的uboot'
           tag_name: uboot-${{ steps.compile.outputs.file_date2 }}
           body: |
             基于 ${{ env.REPOSITORY_URL }} 编译
