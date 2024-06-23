@@ -41,7 +41,7 @@ jobs:
           #ln -s "$REPOSITORY_DIR/atf-20231013-0ea67d76a/configs" "$REPOSITORY_DIR/atf-20220606-637ba581b/configs"
           cd $REPOSITORY_DIR
           #cp -r ./atf-20220606-637ba581b/configs/ ./atf-20231013-0ea67d76a/configs
-          SOC=mt7981 BOARD=cmcc_rax3000m-emmc ./build.sh
+          SOC=mt7981 BOARD=cmcc_rax3000m ./build.sh
           cd output
           sha256sum * >> sha256sum.txt
           cat sha256sum.txt
@@ -55,7 +55,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: '[uBoot][${{ steps.compile.outputs.file_date1 }}]适用于cmcc_rax3000m_emcc版本的uboot'
+          name: '[uBoot][${{ steps.compile.outputs.file_date1 }}]适用于cmcc_rax3000m_nand版本的uboot'
           tag_name: uboot-${{ steps.compile.outputs.file_date2 }}
           body: |
             基于 ${{ env.REPOSITORY_URL }} 编译
