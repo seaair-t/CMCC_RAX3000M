@@ -7,7 +7,7 @@ on:
 
 env:
   MY_WORKSPACE: /home/runner
-  REPOSITORY_URL: https://github.com/hanwckf/bl-mt798x
+  REPOSITORY_URL: https://github.com/seaair-t/bl-mt798x
   REPOSITORY_CID: 
   REPOSITORY_DIR: /home/runner/bootloader-mt798x
 
